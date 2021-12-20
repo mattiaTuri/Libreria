@@ -7,7 +7,7 @@ Nella pagina web vengono visualizzate le seguenti informazioni:
 -Autore
 -Descrizione
 
-![Libreria](https://user-images.githubusercontent.com/85845784/146826686-c7a31cfb-a5ff-42b5-b5fb-848aacecf23c.png)
+![Libreria](https://user-images.githubusercontent.com/85845784/146826927-f11270cf-5f86-4a80-a2d3-49d2188afcc1.png)
 
 VERSIONE
 
