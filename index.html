@@ -26,16 +26,19 @@
     </header>
 
     <section id="one" class="main">
-        <h3>Enter book genre</h3>
+        <h2>Enter book genre</h2>
         <div class="form-book input-group mb-3">
             <input id="genre" type="text" class="form-control"/>
             <button id="search" onclick="searchBook(this.getAttribute('keyAPI'))" type="submit" class="btn btn-primary">Search</button>
         </div>
         <span>Most searched</span>
-        <div>
-            <button id="search" onclick="pref(this.textContent)" type="submit" class="btn btn-primary">love</button>
+        <div class="listBook">
+            <button id="search" onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary">fantasy</button>
+            <button id="search" onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary">history</button>
+            <button id="search" onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary">horror</button>
+            <button id="search" onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary">love</button>
+            <button id="search" onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary">science</button>
         </div>
-        <span id="error" style="visibility: hidden;">Error: please enter a correct genre </span>
     </section>
 
     <!-- Modal -->

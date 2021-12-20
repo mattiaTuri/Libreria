@@ -11,7 +11,7 @@ async function searchBook(){
     callAPI(url);
 }
 
- function pref(input){
+ function mostSearched(input){
 
     const url = api + key + input + apiKey;
     
@@ -28,8 +28,6 @@ async function callAPI(url){
 }
 
 function createTable(data){
-
-    document.getElementById("error").style.visibility = "hidden"; 
 
     if(document.querySelector('table')){
         document.getElementById('one').removeChild(document.querySelector('table'));

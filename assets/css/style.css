@@ -1,8 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -18,16 +17,20 @@ header {
 .main {
   margin-top: 20px;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main .listBook {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main .listBook button {
+  margin: 5px;
 }
 
 .main .form-book {
@@ -35,8 +38,7 @@ header {
 }
 
 .main span {
-  color: red;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .main table {
