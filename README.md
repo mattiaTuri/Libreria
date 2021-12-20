@@ -10,6 +10,8 @@ Nella pagina web vengono visualizzate le seguenti informazioni:
 
 -Descrizione
 
+Il sito web è completamente responsive.
+
 ![Libreria](https://user-images.githubusercontent.com/85845784/146827386-8670bae8-24ab-478d-ab30-926e8c549833.png)
 
 VERSIONE
