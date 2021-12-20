@@ -1,6 +1,6 @@
 # Libreria
 
-Il progetto libreria visualizza una lista di libri basati sul genere inserito dall'utente o tramite uno degli appositi pulsanti. I libri vengono cercati attraverso una chiamata web api al sito https://openlibrary.org/developers/api e infine rappresentati sotto forma di tabella.
+Il progetto libreria visualizza una lista di libri attraverso l’inserimento di un genere nel textbox, oppure tramite cinque pulsanti che rappresentano i generi più cercati. I libri vengono cercati attraverso una chiamata web api al sito https://openlibrary.org/developers/api e infine rappresentati sotto forma di tabella.
 
 Nella pagina web vengono visualizzate le seguenti informazioni:
 
