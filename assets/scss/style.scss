@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #262626 !important;
+    //background: linear-gradient(to left, #8f94fb, #4e54c8);
+}
+
+header {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.main {
+    margin-top: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .form-book {
+        width: 500px;
+    }
+
+    span {
+        color: red;
+        margin-bottom: 20px;
+    }
+
+    table {
+        color: white;    
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main {
+        .form-book {
+            width: 80%;
+        }
+    }
+}
+
+//Desktop
+@media screen and (min-width: 1000px) {
+    .main {
+        table {
+            tr {
+                td {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
