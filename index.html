@@ -28,7 +28,7 @@
     <section id="one" class="main">
         <h2>Enter book genre</h2>
         <div class="form-book input-group mb-3">
-            <input id="genre" type="text" class="form-control"/>
+            <input type="text" class="form-control"/>
             <button onclick="searchBook(this.getAttribute('keyAPI'))" type="submit" class="btn btn-primary">Search</button>
         </div>
         <span>Most searched</span>
@@ -42,11 +42,11 @@
     </section>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="1 aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modal-description" tabindex="1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header text-center">
-                    <h5 class="modal-title" id="exampleModalLabel">Synopsis book</h5>
+                    <h5 class="modal-title">Synopsis book</h5>
                     <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div id="description" class="modal-body"></div>
