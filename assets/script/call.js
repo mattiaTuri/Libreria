@@ -19,6 +19,12 @@ async function searchBook(){
 }
 
 async function callAPI(url){
+
+    document.querySelectorAll('button.btn').forEach(elem => {
+        elem.disabled = true;
+    });
+    document.getElementById("loading").style.display = "block";
+    document.body.style.opacity = "50%";
     const response = await fetch(url);
 
     //Trasforma la risposta in un json
@@ -64,6 +70,11 @@ function createTable(data){
     }
     table.appendChild(tbody);
     document.getElementById('one').appendChild(table)
+    document.getElementById("loading").style.display = "none";
+    document.body.style.opacity = "100%";
+    document.querySelectorAll('button.btn').forEach(elem => {
+        elem.disabled = false;
+    });
 }
 
 const description = document.createElement("p");
@@ -80,7 +91,6 @@ async function showDescription(id){
     description.textContent = data.description.value ?? data.description;
     document.getElementById('description').appendChild(description);
 }
-
 
 let createTemplateTable = () => {
     const table = document.createElement("table");

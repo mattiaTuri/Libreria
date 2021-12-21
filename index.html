@@ -29,17 +29,24 @@
         <h2>Enter book genre</h2>
         <div class="form-book input-group mb-3">
             <input type="text" class="form-control"/>
-            <button onclick="searchBook(this.getAttribute('keyAPI'))" type="submit" class="btn btn-primary">Search</button>
+            <button onclick="searchBook(this.getAttribute('keyAPI'))" type="submit" class="btn btn-primary" enable>Search</button>
         </div>
         <span>Most searched</span>
         <div class="listBook">
-            <button onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary">fantasy</button>
-            <button onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary">history</button>
-            <button onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary">horror</button>
-            <button onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary">love</button>
-            <button onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary">romance</button>
+            <button onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary" enable>fantasy</button>
+            <button onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary" enable>history</button>
+            <button onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary" enable>horror</button>
+            <button onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary" enable>love</button>
+            <button onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary" enable>romance</button>
         </div>
     </section>
+
+    <div class="d-flex justify-content-center">
+        <div id="loading" class="spinner-border text-primary" role="status" style="display: none">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+    </div>
+    
 
     <!-- Modal -->
     <div class="modal fade" id="modal-description" tabindex="1" aria-hidden="true">
