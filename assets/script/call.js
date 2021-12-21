@@ -99,6 +99,6 @@ let createButton = () => {
     button.classList.add("px-3");
     button.setAttribute("onclick","showDescription(this.getAttribute('key'))");
     button.setAttribute("data-mdb-toggle","modal");
-    button.setAttribute("data-mdb-target","#exampleModal");
+    button.setAttribute("data-mdb-target","#modal-description");
     return button;
 }
