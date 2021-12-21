@@ -70,6 +70,8 @@ const description = document.createElement("p");
 
 async function showDescription(id){
     
+    description.textContent = '';
+    
     url = api + id + apiKey;
     const response = await fetch(url);
 
