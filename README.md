@@ -12,7 +12,7 @@ Nella pagina web vengono visualizzate le seguenti informazioni:
 
 Il sito web è completamente responsive.
 
-![Libreria](https://user-images.githubusercontent.com/85845784/146827386-8670bae8-24ab-478d-ab30-926e8c549833.png)
+![libreria](https://user-images.githubusercontent.com/85845784/147388365-74c915f6-d7d5-4887-a951-8d5d85efd8ad.PNG)
 
 VERSIONE
 
