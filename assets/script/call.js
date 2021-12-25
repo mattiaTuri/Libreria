@@ -5,8 +5,8 @@ const apiKey = ".json";
 function searchBook(){
     let input = "";
     input = document. querySelector('input').value;
-
-    const url = api + key + input + apiKey;
+    let result = input.toLowerCase();
+    const url = api + key + result + apiKey;
     
     if(input != ""){
         document.getElementById("error").style.visibility = "hidden";
