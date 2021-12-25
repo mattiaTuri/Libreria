@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
-
+    
 </head>
 
 <body>
@@ -29,8 +29,9 @@
         <h2>Enter book genre</h2>
         <div class="form-book input-group mb-3">
             <input type="text" class="form-control"/>
-            <button onclick="searchBook(this.getAttribute('keyAPI'))" type="submit" class="btn btn-primary" enable>Search</button>
+            <button onclick="searchBook(this.getAttribute('keyAPI'))" type="submit" class="btn btn-primary" enable>Search</button>          
         </div>
+        <span id="error" style="visibility:hidden">Please enter a valid genre</span>
         <span>Most searched</span>
         <div class="listBook">
             <button onclick="mostSearched(this.textContent)" type="submit" class="btn btn-primary" enable>fantasy</button>
@@ -43,7 +44,7 @@
 
     <div class="d-flex justify-content-center">
         <div id="loading" class="spinner-border text-primary" role="status" style="display: none">
-            <span class="visually-hidden">Loading...</span>
+            <span class="visually-hidden"></span>
           </div>
     </div>
     
@@ -68,7 +69,8 @@
 
 </body>
 
-<script src="assets/script/call.js"></script>
+<script type="text/javascript" src="./node_modules/lodash/lodash.js"></script>
+<script type="text/javascript" src="assets/script/call.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>
 
 </html>

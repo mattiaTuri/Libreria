@@ -37,6 +37,10 @@ header {
   width: 500px;
 }
 
+.main #error {
+  color: #FF1744;
+}
+
 .main span {
   margin-top: 20px;
 }

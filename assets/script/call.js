@@ -2,17 +2,23 @@ const api = "https://openlibrary.org";
 const key = "/subjects/";
 const apiKey = ".json";
 
-async function searchBook(){
+function searchBook(){
     let input = "";
     input = document. querySelector('input').value;
 
     const url = api + key + input + apiKey;
     
-    callAPI(url);
+    if(input != ""){
+        document.getElementById("error").style.visibility = "hidden";
+        callAPI(url);
+    }else{
+        document.getElementById("error").style.visibility = "visible";
+    }
 }
 
- function mostSearched(input){
+function mostSearched(input){
 
+    document.getElementById("error").style.visibility = "hidden";
     const url = api + key + input + apiKey;
     
     callAPI(url);
@@ -29,11 +35,11 @@ async function callAPI(url){
 
     //Trasforma la risposta in un json
     const data = await response.json();
-
-    createTable(data);
+    const defaultValue = _.get(data, "works.author", "Not present");
+    createTable(data, defaultValue); 
 }
 
-function createTable(data){
+function createTable(data,defaultValue){
 
     if(document.querySelector('table')){
         document.getElementById('one').removeChild(document.querySelector('table'));
@@ -56,13 +62,18 @@ function createTable(data){
             thead.appendChild(tr);
             table.appendChild(thead);
 
-        }else if(i != 0){
-            
+        }else if(i != 0){      
             let button = createButton();    
             tr.setAttribute("scope","row");
             tr.insertCell(0).textContent = data.works[count].title;
-            tr.insertCell(1).textContent = data.works[count].authors[0].name;
-            button.setAttribute("key",data.works[count].key);
+
+            if(data.works[count].authors[0] != undefined){          
+                tr.insertCell(1).textContent = data.works[count].authors[0].name; 
+            }else{
+                tr.insertCell(1).textContent = defaultValue; 
+            }
+        
+            button.setAttribute("key", data.works[count].key);
             tr.insertCell(2).appendChild(button);           
             tbody.appendChild(tr);           
             count++;
@@ -87,8 +98,21 @@ async function showDescription(id){
     const response = await fetch(url);
 
     const data = await response.json();
+    const defaultDescription = _.get(data, "description", "Description not present");
 
-    description.textContent = data.description.value ?? data.description;
+    /*if(data.description != undefined || data.has(description)){          
+        description.textContent = data.description.value;
+    }else{
+        description.textContent = defaultDescription; 
+    }*/
+
+    if(data.description && data.description.value != undefined){
+        description.textContent = data.description.value;
+    }else{
+        description.textContent = defaultDescription;
+    }
+
+    //description.textContent = data.description.value ?. data.description;
     document.getElementById('description').appendChild(description);
 }
 
