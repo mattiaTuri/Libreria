@@ -4,11 +4,15 @@ Il progetto libreria visualizza una lista di libri attraverso l’inserimento di
 
 Nella pagina web vengono visualizzate le seguenti informazioni:
 
--Titolo
+- Titolo
 
--Autore
+- Autore
 
--Descrizione
+- Descrizione
+
+Tool utilizzati:
+
+- Boostrap material come libreria grafica.
 
 Il sito web è completamente responsive.
 
